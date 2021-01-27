@@ -5,9 +5,9 @@ const MovieList = ({ movies }) => {
     return (
         <div className={'container-fluid movie-app'}>
             <div className="row">
-                {movies.map((movie, i) => (
+                {movies && Array.isArray(movies) && movies.length ? movies.map((movie, i) => (
                         <MovieCard key={i} movie={movie} />
-                ))}
+                )): null}
             </div>
         </div>
     )
