@@ -13,8 +13,10 @@ const MovieCard = ({ movie }) => {
             >
                 <Card.Header>{movie.Title}</Card.Header>
                 <Card.Body>
+                    <div style={{width: 'inherit'}}>
                     <img src={movie.Poster} alt={'movie'} />
-                    <Button title="Details" onClick={(e) => history.push(`/details/${movie.imdbID}`)}></Button>
+                    </div>
+                    <Button style={{width: '100%', marginTop: 15}} title="Details" onClick={(e) => history.push(`/details/${movie.imdbID}`)}>Details</Button>
                 </Card.Body>
             </Card>
         </>

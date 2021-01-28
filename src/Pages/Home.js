@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Search from '../Components/Search';
 import MovieList from '../Components/MovieList';
 import history from '../history';
+// import { debounce } from "../helper";
 
 const Home = () => {
     const [movies, setMovies] = useState([])
@@ -23,7 +24,7 @@ const Home = () => {
 
     useEffect(()=> {
       handleSearch(searchValue)
-    },[history.location.search])
+    },[searchValue])
     return (
         <>
         <Search handleClick={handleSearch} value={searchValue} handleSearchChange={handleSearchChange}/>

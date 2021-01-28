@@ -24,6 +24,9 @@ const MovieDetails = (props) => {
                 <Card.Header>{movie.Title}</Card.Header>
                 <Card.Body>
                     <img src={movie.Poster} alt={'movie'} />
+                    <div>
+                        {movie.Plot}
+                    </div>
                 </Card.Body>
             </Card>
         </>

@@ -5,7 +5,7 @@ import React, {useEffect, useState} from 'react'
 function Search({handleClick, handleSearchChange, value}) {
     const [searchTerm, setSearchTerm] = useState()
     return (
-        <>
+        <div style={{display:'flex', flexDirection: 'row', justifyContent: 'center'}}>
             <Form onSubmit={()=> handleClick(searchTerm)} inline>
                 <FormControl
                 name='search'
@@ -16,7 +16,7 @@ function Search({handleClick, handleSearchChange, value}) {
                     }} type="text" placeholder="Type to search" className="mr-sm-2" />
                 {/* <Button onClick={()=> handleClick(searchTerm)} variant="outline-success">Search</Button> */}
             </Form>
-        </>
+        </div>
     );
 }
 
